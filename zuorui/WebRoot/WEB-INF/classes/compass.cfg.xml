@@ -1,0 +1,26 @@
+<compass-core-config xmlns="http://www.compass-project.org/schema/core-config"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.compass-project.org/schema/core-config
+           http://www.compass-project.org/schema/compass-core-config-2.2.xsd">
+
+   <compass name="default">
+      <connection>
+      		<!-- 
+      			索引库的位置
+      		 -->
+          <file path="./indexDir"/>
+      </connection>
+       <!-- 配置高亮 -->
+      <searchEngine>
+      	<highlighter name="default" maxNumFragments="30">
+      		<!-- 自定义高亮类的类名 -->
+      		<customFormatter class="normal.MyFormatter"/>
+      	</highlighter>
+      </searchEngine>
+			<!-- 映射实体 -->
+      <mappings>
+          <class name="normal.homework" />
+      </mappings>
+   
+   </compass>
+</compass-core-config>     
